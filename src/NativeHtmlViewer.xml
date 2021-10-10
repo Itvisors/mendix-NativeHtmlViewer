@@ -5,12 +5,15 @@
         xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
     <name>Native Html Viewer</name>
     <description>Mendix native HTML viewer</description>
-    <icon/>
+    <studioProCategory>Text</studioProCategory>
     <properties>
         <propertyGroup caption="General">
-            <property key="yourName" type="string" required="false">
-                <caption>Name</caption>
-                <description>Enter your name</description>
+            <property key="content" type="attribute">
+                <caption>Content</caption>
+                <description>The HTML content to display</description>
+                <attributeTypes>
+                    <attributeType name="String" />
+                </attributeTypes>
             </property>
         </propertyGroup>
     </properties>

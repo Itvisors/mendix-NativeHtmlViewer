@@ -3,8 +3,8 @@ import { TextStyle, ViewStyle } from "react-native";
 
 import { Style } from "@mendix/pluggable-widgets-tools";
 
-import { HelloWorld } from "./components/HelloWorld";
 import { NativeHtmlViewerProps } from "../typings/NativeHtmlViewerProps";
+import { NativeHtmlRenderer } from "./components/NativeHtmlRenderer";
 
 export interface CustomStyle extends Style {
     container: ViewStyle;
@@ -13,6 +13,6 @@ export interface CustomStyle extends Style {
 
 export class NativeHtmlViewer extends Component<NativeHtmlViewerProps<CustomStyle>> {
     render(): ReactNode {
-        return <HelloWorld name={this.props.yourName} style={this.props.style} />;
+        return <NativeHtmlRenderer content={this.props.content?.value}></NativeHtmlRenderer>;
     }
 }
