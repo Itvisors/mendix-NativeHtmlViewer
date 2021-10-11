@@ -2,7 +2,7 @@
   "name": "nativehtmlviewer",
   "widgetName": "NativeHtmlViewer",
   "version": "1.0.0",
-  "description": "Mendix native HTML viewer",
+  "description": "Native HTML viewer",
   "copyright": "ITvisors 2021",
   "author": "Marcel Groeneweg",
   "engines": {
@@ -25,10 +25,7 @@
     "url": "https://github.com/Marcel Groeneweg/nativehtmlviewer/issues"
   },
   "devDependencies": {
-    "@mendix/pluggable-widgets-tools": "^9.0.0",
-    "@types/big.js": "^6.0.2",
-    "@types/react": "~17.0.1",
-    "@types/react-native": "~0.63.52"
+    "@mendix/pluggable-widgets-tools": "^9.0.0"
   },
   "dependencies": {
     "react-native-render-html": "^6.1.0"

@@ -1,5 +1,5 @@
 ## NativeHtmlViewer
-[Mendix native HTML viewer]
+[Native HTML viewer]
 
 ## Features
 [feature highlights]
