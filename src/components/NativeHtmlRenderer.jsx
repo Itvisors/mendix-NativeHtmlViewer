@@ -1,11 +1,19 @@
+import { Appearance, useWindowDimensions } from "react-native";
 import RenderHtml from "react-native-render-html";
 import { createElement } from "react";
-import { useWindowDimensions } from "react-native";
+import { mergeNativeStyles } from "@mendix/pluggable-widgets-tools";
 
 export const NativeHtmlRenderer = props => {
     const { width } = useWindowDimensions();
     const source = {
         html: props.content ? props.content : ""
     };
-    return <RenderHtml contentWidth={width} source={source} tagsStyles={props.styles} />;
+    const darkMode = Appearance.getColorScheme() === "dark";
+    const defaultStyle = {
+        body: {
+            color: darkMode ? "#FFF" : "#0A1325" // Default text color
+        }
+    };
+    const styles = mergeNativeStyles(defaultStyle, props.style);
+    return <RenderHtml contentWidth={width} source={source} tagsStyles={styles} />;
 };
