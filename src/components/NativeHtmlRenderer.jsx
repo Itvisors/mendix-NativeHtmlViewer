@@ -15,5 +15,17 @@ export const NativeHtmlRenderer = props => {
         }
     };
     const styles = mergeNativeStyles(defaultStyle, props.style);
-    return <RenderHtml contentWidth={width} source={source} tagsStyles={styles} />;
+    let ignoredStyles;
+    if (props.ignoredStyles) {
+        ignoredStyles = props.ignoredStyles.split(",");
+    }
+    return (
+        <RenderHtml
+            contentWidth={width}
+            source={source}
+            tagsStyles={styles}
+            ignoredStyles={ignoredStyles}
+            enableCSSInlineProcessing={props.enableCSSInlineProcessing}
+        />
+    );
 };

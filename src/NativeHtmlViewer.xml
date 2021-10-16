@@ -15,6 +15,16 @@
                     <attributeType name="String" />
                 </attributeTypes>
             </property>
+            <property key="ignoredStyles" type="expression" required="false">
+                <caption>Ignored styles</caption>
+                <description>Style attributes to ignore, like color to use the color from the native app style or widget default. Important! Values are camelCased: background-color must be passed as backgroundColor. Separate multiple values using a comma.</description>
+                <returnType type="String" />
+            </property>
+            <property key="enableCSSInlineProcessing" type="expression" required="false">
+                <caption>Enable CSS inline style processing</caption>
+                <description>Optional. When true, CSS inline style of the source is used. Turn off to turn off all inline styling. Defaults to true when not set.</description>
+                <returnType type="Boolean" />
+            </property>
         </propertyGroup>
     </properties>
 </widget>
