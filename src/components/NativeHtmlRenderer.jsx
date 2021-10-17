@@ -14,7 +14,12 @@ export const NativeHtmlRenderer = props => {
             color: darkMode ? "#FFF" : "#0A1325" // Default text color
         }
     };
-    const styles = mergeNativeStyles(defaultStyle, props.style);
+    // The mergeNativeStyles function only includes from the style prop what already exists in the default style.
+    let styles = defaultStyle;
+    for (const styleItem of props.style) {
+        styles = { ...styles, ...styleItem };
+    }
+    // console.info("Merged styles: " + JSON.stringify(styles));
     let ignoredStyles;
     if (props.ignoredStyles) {
         ignoredStyles = props.ignoredStyles.split(",");
