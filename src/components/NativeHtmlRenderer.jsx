@@ -1,7 +1,6 @@
 import { Appearance, useWindowDimensions } from "react-native";
 import RenderHtml from "react-native-render-html";
 import { createElement } from "react";
-import { mergeNativeStyles } from "@mendix/pluggable-widgets-tools";
 
 export const NativeHtmlRenderer = props => {
     const { width } = useWindowDimensions();
