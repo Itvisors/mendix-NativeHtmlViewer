@@ -1,13 +1,14 @@
 {
   "name": "nativehtmlviewer",
   "widgetName": "NativeHtmlViewer",
-  "version": "1.1.0",
+  "version": "2.0.0",
   "description": "Native HTML viewer",
   "copyright": "ITvisors 2021",
   "author": "Marcel Groeneweg",
   "engines": {
     "node": ">=12"
   },
+  "license": "Apache-2.0",
   "config": {
     "projectPath": "./test/"
   },
@@ -20,14 +21,10 @@
     "prerelease": "npm run lint",
     "release": "pluggable-widgets-tools release:native"
   },
-  "license": "Apache-2.0",
-  "bugs": {
-    "url": "https://github.com/Marcel Groeneweg/nativehtmlviewer/issues"
-  },
   "devDependencies": {
-    "@mendix/pluggable-widgets-tools": "^9.10.0"
+    "@mendix/pluggable-widgets-tools": "^9.11.1"
   },
   "dependencies": {
-    "react-native-render-html": "^6.1.0"
+    "react-native-render-html": "^6.3.4"
   }
 }
