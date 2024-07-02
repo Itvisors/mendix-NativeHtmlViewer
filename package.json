@@ -1,7 +1,7 @@
 {
   "name": "nativehtmlviewer",
   "widgetName": "NativeHtmlViewer",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Native HTML viewer",
   "copyright": "ITvisors 2021",
   "author": "Marcel Groeneweg",
@@ -22,9 +22,21 @@
     "release": "pluggable-widgets-tools release:native"
   },
   "devDependencies": {
-    "@mendix/pluggable-widgets-tools": "^9.11.1"
+    "@mendix/pluggable-widgets-tools": "^10.12.0"
   },
   "dependencies": {
     "react-native-render-html": "^6.3.4"
+  },
+  "resolutions": {
+    "react": "18.2.0",
+    "react-native": "0.72.7",
+    "@types/react": "18.2.0",
+    "@types/react-native": "0.72.7"
+  },
+  "overrides": {
+    "react": "18.2.0",
+    "react-native": "0.72.7",
+    "@types/react": "18.2.0",
+    "@types/react-native": "0.72.7"
   }
 }
