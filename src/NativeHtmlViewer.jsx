@@ -1,5 +1,4 @@
 import { NativeHtmlRenderer } from "./components/NativeHtmlRenderer";
-import { createElement } from "react";
 
 export const NativeHtmlViewer = props => {
     let enableCSSInlineProcessingValue = true;

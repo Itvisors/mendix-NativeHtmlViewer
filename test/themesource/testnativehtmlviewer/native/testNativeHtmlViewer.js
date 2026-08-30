@@ -1,4 +1,11 @@
 
+export const defaultStyles = {
+    h1: {
+        fontSize: 28,
+        marginBottom: 5
+    }
+};
+
 export const greenHeaders = {
     h1: {
         color: "green"
