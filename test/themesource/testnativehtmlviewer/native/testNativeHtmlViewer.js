@@ -3,7 +3,22 @@ export const defaultStyles = {
     h1: {
         fontSize: 28,
         marginBottom: 5
-    }
+    },
+    strong: { 
+        fontWeight: 'bold' 
+    },
+    b: { 
+        fontWeight: 'bold' 
+    },
+    em: { 
+        fontStyle: 'italic' 
+    },
+    i: { 
+        fontStyle: 'italic' 
+    },
+    u: { 
+        textDecorationLine: 'underline' 
+    },
 };
 
 export const greenHeaders = {

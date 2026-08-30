@@ -43,7 +43,34 @@ Inline styles in the HTML content can be disabled entirely by setting this prope
 ### Styling the rich text content
 The library can style HTML tags. The widget uses this to specify a color on the body tag, to make all text appear in this color.
 
-You can do the same by creating a custom class in your native theme. The class in the example below sets the color of the headers to green.
+You can do the same by creating custom classes in your native theme.
+
+This class sets some default styles so h1 is actually larger. It also ensures that bold, italic and underline are rendered correctly.
+```
+export const defaultStyles = {
+    h1: {
+        fontSize: 28,
+        marginBottom: 5
+    },
+    strong: { 
+        fontWeight: 'bold' 
+    },
+    b: { 
+        fontWeight: 'bold' 
+    },
+    em: { 
+        fontStyle: 'italic' 
+    },
+    i: { 
+        fontStyle: 'italic' 
+    },
+    u: { 
+        textDecorationLine: 'underline' 
+    },
+};
+```
+
+The class in the example below sets the color of the headers to green.
 
 ```
 export const greenHeaders = {
