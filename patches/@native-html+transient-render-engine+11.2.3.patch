@@ -1,0 +1,40 @@
+diff --git a/node_modules/@native-html/transient-render-engine/lib/commonjs/tree/TPhrasingCtor.js b/node_modules/@native-html/transient-render-engine/lib/commonjs/tree/TPhrasingCtor.js
+index 55a70c1..cb55aef 100644
+--- a/node_modules/@native-html/transient-render-engine/lib/commonjs/tree/TPhrasingCtor.js
++++ b/node_modules/@native-html/transient-render-engine/lib/commonjs/tree/TPhrasingCtor.js
+@@ -46,8 +46,13 @@ TPhrasingCtor.prototype.collapseChildren = function collapseChildren() {
+ 
+     previous = childK;
+   });
+-  this.trimLeft();
+-  this.trimRight();
++  // Only anonymous phrasing nodes sit at a block boundary. Trimming named
++  // inline nodes (strong, em, span...) drops a meaningful trailing space
++  // in nested tags such as <strong><em>text </em></strong>next.
++  if (this.tagName === null) {
++    this.trimLeft();
++    this.trimRight();
++  }
+   return null;
+ };
+ 
+diff --git a/node_modules/@native-html/transient-render-engine/src/tree/TPhrasingCtor.ts b/node_modules/@native-html/transient-render-engine/src/tree/TPhrasingCtor.ts
+index bcf6131..d2822b4 100644
+--- a/node_modules/@native-html/transient-render-engine/src/tree/TPhrasingCtor.ts
++++ b/node_modules/@native-html/transient-render-engine/src/tree/TPhrasingCtor.ts
+@@ -48,8 +48,13 @@ TPhrasingCtor.prototype.collapseChildren = function collapseChildren() {
+     }
+     previous = childK;
+   });
+-  this.trimLeft();
+-  this.trimRight();
++  // Only anonymous phrasing nodes sit at a block boundary. Trimming named
++  // inline nodes (strong, em, span...) drops a meaningful trailing space
++  // in nested tags such as <strong><em>text </em></strong>next.
++  if (this.tagName === null) {
++    this.trimLeft();
++    this.trimRight();
++  }
+   return null;
+ };
+ 

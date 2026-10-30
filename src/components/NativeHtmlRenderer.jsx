@@ -1,5 +1,6 @@
 import { Appearance, useWindowDimensions } from "react-native";
 import RenderHtml from "react-native-render-html";
+import { tableRenderers } from "./TableRenderers";
 
 export const NativeHtmlRenderer = props => {
     const { width } = useWindowDimensions();
@@ -27,6 +28,7 @@ export const NativeHtmlRenderer = props => {
             contentWidth={width}
             source={source}
             tagsStyles={styles}
+            renderers={tableRenderers}
             ignoredStyles={ignoredStyles}
             enableCSSInlineProcessing={props.enableCSSInlineProcessing}
         />

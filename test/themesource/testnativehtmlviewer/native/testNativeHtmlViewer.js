@@ -4,6 +4,9 @@ export const defaultStyles = {
         fontSize: 28,
         marginBottom: 5
     },
+    p: {
+        minHeight: 12
+    },
     strong: { 
         fontWeight: 'bold' 
     },

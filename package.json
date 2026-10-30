@@ -1,7 +1,7 @@
 {
   "name": "nativehtmlviewer",
   "widgetName": "NativeHtmlViewer",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Native HTML viewer",
   "copyright": "ITvisors 2021",
   "author": "Marcel Groeneweg",
@@ -19,10 +19,12 @@
     "lint": "pluggable-widgets-tools lint",
     "lint:fix": "pluggable-widgets-tools lint:fix",
     "prerelease": "npm run lint",
-    "release": "pluggable-widgets-tools release:native"
+    "release": "pluggable-widgets-tools release:native",
+    "postinstall": "patch-package"
   },
   "devDependencies": {
-    "@mendix/pluggable-widgets-tools": "11.12.1"
+    "@mendix/pluggable-widgets-tools": "11.12.1",
+    "patch-package": "^8.0.1"
   },
   "dependencies": {
     "react-native-render-html": "^6.3.4"

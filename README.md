@@ -45,12 +45,15 @@ The library can style HTML tags. The widget uses this to specify a color on the 
 
 You can do the same by creating custom classes in your native theme.
 
-This class sets some default styles so h1 is actually larger. It also ensures that bold, italic and underline are rendered correctly.
+This class sets some default styles so h1 is actually larger. It also ensures that bold, italic and underline are rendered correctly. The minHeight on the paragraph tag ensures that empty paragraphs are rendered with a height of 12 pixels, so they are visible.
 ```
 export const defaultStyles = {
     h1: {
         fontSize: 28,
         marginBottom: 5
+    },
+    p: {
+        minHeight: 12
     },
     strong: { 
         fontWeight: 'bold' 

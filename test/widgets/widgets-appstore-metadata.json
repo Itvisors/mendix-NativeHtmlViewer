@@ -48,6 +48,18 @@
       "name": "RichText",
       "version": "5.0.0",
       "appStoreVersionGuid": "6e064998-392b-48d0-94fa-fde37acc0f23"
+    },
+    {
+      "sha-256": "3a4d1a80cd3bab5d2f61e14681a3d63d693cb67bac1145a09b874faa6886926c",
+      "name": "Combobox",
+      "version": "2.10.0",
+      "appStoreVersionGuid": "62c56277-dcb7-4bc2-acda-826224e8ffbb"
+    },
+    {
+      "sha-256": "fa327ba1347dc12f12d182238c25b698adae1bd523d9c703955c23d374baa9dd",
+      "name": "RichText",
+      "version": "5.1.1",
+      "appStoreVersionGuid": "79811ce1-4bc2-47cb-9190-ca42959c931a"
     }
   ]
 }
